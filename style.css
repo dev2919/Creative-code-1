@@ -132,14 +132,14 @@ body {
   box-sizing: border-box;
   border: 8px solid #F3BFCC;
   border-radius: 60%;
-  animation: animate 6s linear infinite;
-  animation-delay: calc(0.6s * var(--i))
+  animation: animate 8s linear infinite;
+  animation-delay: calc(0.8s * var(--i))
 }
 
 @keyframes animate {
   0% {
-    width: 0px;
-    height: 0px;
+    width: 300px;
+    height: 150px;
   }
 
   100% {
