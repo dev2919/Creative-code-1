@@ -1,0 +1,175 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  background: black;
+}
+
+@font-face {
+  font-family: soal;
+  src: url('./assets/soal.ttf');
+}
+
+@font-face {
+  font-family: futura-m;
+  src: url('./assets/fm.ttf');
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.container {
+  position: relative;
+  background: #F1A7BA;
+  width: 732px;
+  height: clamp(764px, 88%, 820px);
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.tex {
+  mix-blend-mode: multiply;
+  position: absolute;
+  z-index: 10;
+  width: 175pc;
+  opacity: 0.6;
+}
+
+.container .box {
+  z-index: 0;
+  width: 3140px;
+  height: 956px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 160px;
+  bottom: 30px;
+  transform: rotate(355deg);
+}
+
+.img_box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  font-family: 'soal', 'Courier New', Courier, monospace;
+  font-size: 3rem;
+  font-weight: bold;
+  flex-direction: column;
+}
+
+.img_box p span {
+  font-size: 4rem;
+  text-decoration: underline;
+}
+
+.img_box p {
+  opacity: 0.8;
+  margin-left: 56px;
+  display: flex;
+  flex-direction: column;
+}
+
+.img1 {
+  width: 440px;
+  position: relative;
+  right: 8px;
+  top: 103px;
+  align-self: center;
+}
+
+.img2 {
+  width: 440px;
+  position: absolute;
+  right: 298px;
+  top: 148px;
+  align-self: center;
+  /* animation: animateeye 2s linear infinite */
+}
+
+@keyframes animateeye {
+  0% {
+    right: 298px;
+    top: 176px;
+  }
+
+  50% {
+    right: 318px;
+    top: 180px;
+  }
+
+  80% {
+    right: 268px;
+    top: 182px;
+  }
+}
+
+.font_box {
+  font-family: 'soal', 'Courier New', Courier, monospace;
+  font-size: 2rem;
+}
+
+.container .box span {
+  position: absolute;
+  box-sizing: border-box;
+  border: 8px solid #F3BFCC;
+  border-radius: 60%;
+  animation: animate 6s linear infinite;
+  animation-delay: calc(0.6s * var(--i))
+}
+
+@keyframes animate {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+
+  100% {
+    width: 208%;
+    height: 80%;
+  }
+}
+
+.meta {
+  font-size: 0.3em;
+  margin: 0px !important;
+}
+
+
+
+.gradient-box {
+  width: 88%;
+  height: 16px;
+  margin: 32px auto;
+  background: linear-gradient(90deg, #E38B5F 1.15%, #A8938E 29.16%, #70B0D3 58.29%, #C4A8C2 78.56%, #ED9EB2 98.93%);
+  outline-color: black;
+  outline-style: solid;
+}
+
+.meta-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 56px;
+  padding-top: 28px;
+  font-family: futura-m;
+  opacity: 0.8;
+}
